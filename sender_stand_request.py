@@ -13,5 +13,11 @@ def change_firstName(name):
     body_test ["firstName"] = name
     return body_test
 
+def post_new_client_kits (kit_body, authToken):
+    return requests.post(configuration.URL_SERVICE + configuration.CREATE_USER_KITS,
+                         headers=authToken,
+                         json=kit_body)
+
 response = post_new_user(data.user_body)
 print(response.status_code)
+print(response.json())
