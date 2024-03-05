@@ -1,4 +1,4 @@
-URL_SERVICE = "https://15df3e65-ebcc-4a07-aa5a-a3348640972d.serverhub.praktikum-services.ru"
+URL_SERVICE = "https://4f69ecb8-ec43-4bbd-8ffb-6ac5d20716c9.serverhub.praktikum-services.ru"
 
 DOC_PATH = "/docs/"
 

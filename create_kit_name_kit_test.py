@@ -37,6 +37,10 @@ def negative_assert_code_400(name):
     response = sender_stand_request.post_new_client_kit(kit_body, data.authToken)
     assert response.status_code == 400
 
+def negative_assert_no_name_kit(kit_body):
+    kit_response_negative_no_name = sender_stand_request.post_new_client_kit(kit_body, data.authToken)
+    assert kit_response_negative_no_name.status_code == 400
+
 
 # Тест 1. Успешное создание набора пользователя
 # Параметр name состоит из 1 символа
@@ -116,7 +120,7 @@ def test_9_create_kit_has_number_in_name_get_success_response():
 def test_10_create_kit_no_name_get_error_response():
     kit_body = data.kit_body.copy()
     kit_body.pop("name")
-    negative_assert_code_400(kit_body)
+    negative_assert_no_name_kit(kit_body)
 
 
 # Тест 11. Набор пользователя не создан:
